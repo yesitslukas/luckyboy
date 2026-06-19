@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:wght@400;700&display=swap');
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; min-height: 100%; }
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
 body {
   font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   background: #fff;
@@ -9,38 +9,50 @@ body {
 }
 a { color: #00e; text-decoration: underline; }
 a.active { color: #c00; }
-.site { min-height: 100vh; display: flex; flex-direction: column; }
-.header { text-align: center; padding-top: 45px; }
-.symbols { font-size: 50px; line-height: 1; word-spacing: 24px; margin-bottom: 24px; font-family: 'Libre Baskerville', Georgia, serif; }
-.nav { font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; font-weight: 700; }
-.nav span { color: #000; padding: 0 7px; font-weight: normal; }
-.main { flex: 1; width: 100%; }
-.home-wrap { position: relative; max-width: 1180px; margin: 18px auto 0; min-height: 760px; }
-.hero-img { display: block; width: 523px; height: auto; margin: 0 auto; }
-.name { position: absolute; left: 0; top: 360px; font-family: 'Abril Fatface', Georgia, serif; font-size: 118px; font-weight: 400; letter-spacing: -2px; }
-.tag { position: absolute; right: 0; top: 545px; font-family: Arial, Helvetica, sans-serif; font-style: italic; font-weight: 900; font-size: 60px; }
-.quote { text-align: center; margin-top: 35px; color: #666; font-style: italic; font-weight: 700; font-size: 21px; }
-.sub { text-align: center; margin-top: 10px; font-size: 22px; }
-.page-wrap { max-width: 880px; margin: 70px auto 0; }
-h1 { font-family: 'Abril Fatface', Georgia, serif; font-size: 56px; margin: 0 0 18px; line-height: 1; font-weight: 400; }
-.rule { border: 0; border-top: 1px solid #ccc; margin: 0 0 90px; }
-.coming { text-align: center; color: #666; font-size: 34px; font-style: italic; font-weight: 700; }
-.audio-list { margin-top: -40px; }
-.track { display: grid; grid-template-columns: 55px 1fr; gap: 0; border-bottom: 1px solid #eee; padding: 18px 0; font-size: 24px; font-family: 'Libre Baskerville', Georgia, serif; }
-.num { color: #aaa; font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; text-align: center; font-weight: 700; }
-.footer { text-align: center; border-top: 1px solid #eee; color: #777; font-size: 20px; padding: 30px 0; }
+.site { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.header { text-align: center; padding-top: 26px; flex: 0 0 auto; }
+.symbols { font-size: 34px; line-height: 1; word-spacing: 24px; margin-bottom: 16px; font-family: 'Libre Baskerville', Georgia, serif; }
+.nav { font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1; }
+.nav span { color: #000; padding: 0 6px; font-weight: normal; }
+.main { flex: 1 1 auto; width: 100%; min-height: 0; }
+.home-wrap { position: relative; max-width: 1120px; margin: 16px auto 0; height: calc(100vh - 145px); min-height: 0; }
+.hero-img { display: block; width: min(34vw, 520px, 58vh); height: auto; margin: 0 auto; }
+.name { position: absolute; left: 0; top: 47%; transform: translateY(-50%); font-family: 'Abril Fatface', Georgia, serif; font-size: clamp(72px, 7vw, 118px); font-weight: 400; letter-spacing: -2px; }
+.tag { position: absolute; right: 0; top: 66%; font-family: Arial, Helvetica, sans-serif; font-style: italic; font-weight: 900; font-size: clamp(38px, 4vw, 60px); }
+.quote { text-align: center; margin-top: 22px; color: #666; font-style: italic; font-weight: 700; font-size: 19px; }
+.sub { text-align: center; margin-top: 8px; font-size: 19px; }
+.page-wrap { max-width: 880px; margin: 40px auto 0; }
+h1 { font-family: 'Abril Fatface', Georgia, serif; font-size: 48px; margin: 0 0 16px; line-height: 1; font-weight: 400; }
+.rule { border: 0; border-top: 1px solid #ccc; margin: 0 0 70px; }
+.coming { text-align: center; color: #666; font-size: 28px; font-style: italic; font-weight: 700; }
+.audio-list { margin-top: -28px; }
+.track { display: grid; grid-template-columns: 55px 1fr; gap: 0; border-bottom: 1px solid #eee; padding: 16px 0; font-size: 22px; font-family: 'Libre Baskerville', Georgia, serif; }
+.num { color: #aaa; font-family: 'Libre Baskerville', Georgia, serif; font-size: 18px; text-align: center; font-weight: 700; }
+.footer { text-align: center; border-top: 1px solid #eee; color: #777; font-size: 16px; padding: 16px 0; flex: 0 0 auto; }
 @media (max-width: 900px) {
-  .header { padding-top: 28px; }
-  .symbols { font-size: 36px; word-spacing: 16px; }
-  .nav { font-size: 21px; }
-  .home-wrap { margin-top: 18px; min-height: auto; padding: 0 18px 60px; display: flex; flex-direction: column; align-items: center; }
-  .name, .tag { position: static; }
-  .name { order: 2; font-size: 70px; letter-spacing: -3px; margin-top: 20px; }
-  .hero-img { order: 1; width: min(88vw, 523px); }
-  .tag { order: 3; font-size: 42px; margin-top: 20px; }
-  .quote { order: 4; font-size: 18px; margin-top: 35px; }
-  .sub { order: 5; font-size: 20px; }
-  .page-wrap { margin: 55px 22px 0; }
-  h1 { font-size: 48px; }
-  .coming { font-size: 28px; }
+  html, body { overflow: auto; height: auto; }
+  .site { min-height: 100vh; height: auto; overflow: visible; }
+  .header { padding-top: 24px; }
+  .symbols { font-size: 32px; word-spacing: 16px; margin-bottom: 14px; }
+  .nav { font-size: 19px; }
+  .home-wrap { margin-top: 18px; height: auto; padding: 0 18px 40px; display: flex; flex-direction: column; align-items: center; }
+  .name, .tag { position: static; transform: none; }
+  .name { order: 2; font-size: 64px; letter-spacing: -3px; margin-top: 18px; }
+  .hero-img { order: 1; width: min(86vw, 500px); }
+  .tag { order: 3; font-size: 38px; margin-top: 18px; }
+  .quote { order: 4; font-size: 17px; margin-top: 28px; }
+  .sub { order: 5; font-size: 18px; }
+  .page-wrap { margin: 45px 22px 0; }
+  h1 { font-size: 44px; }
+  .coming { font-size: 26px; }
+}
+@media (max-height: 780px) and (min-width: 901px) {
+  .header { padding-top: 18px; }
+  .symbols { font-size: 30px; margin-bottom: 12px; }
+  .nav { font-size: 18px; }
+  .home-wrap { margin-top: 12px; height: calc(100vh - 120px); }
+  .hero-img { width: min(31vw, 465px, 56vh); }
+  .quote { margin-top: 14px; font-size: 17px; }
+  .sub { font-size: 17px; margin-top: 6px; }
+  .footer { font-size: 14px; padding: 12px 0; }
 }
