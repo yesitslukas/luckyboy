@@ -9,50 +9,79 @@ body {
 }
 a { color: #00e; text-decoration: underline; }
 a.active { color: #c00; }
-.site { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
-.header { text-align: center; padding-top: 26px; flex: 0 0 auto; }
-.symbols { font-size: 34px; line-height: 1; word-spacing: 24px; margin-bottom: 16px; font-family: 'Libre Baskerville', Georgia, serif; }
-.nav { font-family: 'Libre Baskerville', Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1; }
-.nav span { color: #000; padding: 0 6px; font-weight: normal; }
+.site { height: 100vh; height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+.header { text-align: center; padding-top: 22px; flex: 0 0 auto; }
+.symbols { font-size: 42px; line-height: .95; word-spacing: 24px; margin-bottom: 8px; font-family: 'Libre Baskerville', Georgia, serif; }
+.nav { font-family: 'Libre Baskerville', Georgia, serif; font-size: 18px; font-weight: 700; line-height: 1; }
+.nav span { color: #000; padding: 0 5px; font-weight: normal; }
 .main { flex: 1 1 auto; width: 100%; min-height: 0; }
-.home-wrap { position: relative; max-width: 1120px; margin: 16px auto 0; height: calc(100vh - 145px); min-height: 0; }
-.hero-img { display: block; width: min(34vw, 520px, 58vh); height: auto; margin: 0 auto; }
+.home-wrap { position: relative; max-width: 1120px; margin: 14px auto 0; height: calc(100vh - 132px); height: calc(100svh - 132px); min-height: 0; }
+.hero-img { display: block; width: min(34vw, 520px, 58vh); width: min(34vw, 520px, 58svh); height: auto; margin: 0 auto; }
 .name { position: absolute; left: 0; top: 47%; transform: translateY(-50%); font-family: 'Abril Fatface', Georgia, serif; font-size: clamp(72px, 7vw, 118px); font-weight: 400; letter-spacing: -2px; }
 .tag { position: absolute; right: 0; top: 66%; font-family: Arial, Helvetica, sans-serif; font-style: italic; font-weight: 900; font-size: clamp(38px, 4vw, 60px); }
-.quote { text-align: center; margin-top: 22px; color: #666; font-style: italic; font-weight: 700; font-size: 19px; }
-.sub { text-align: center; margin-top: 8px; font-size: 19px; }
-.page-wrap { max-width: 880px; margin: 40px auto 0; }
-h1 { font-family: 'Abril Fatface', Georgia, serif; font-size: 48px; margin: 0 0 16px; line-height: 1; font-weight: 400; }
-.rule { border: 0; border-top: 1px solid #ccc; margin: 0 0 70px; }
-.coming { text-align: center; color: #666; font-size: 28px; font-style: italic; font-weight: 700; }
-.audio-list { margin-top: -28px; }
-.track { display: grid; grid-template-columns: 55px 1fr; gap: 0; border-bottom: 1px solid #eee; padding: 16px 0; font-size: 22px; font-family: 'Libre Baskerville', Georgia, serif; }
-.num { color: #aaa; font-family: 'Libre Baskerville', Georgia, serif; font-size: 18px; text-align: center; font-weight: 700; }
-.footer { text-align: center; border-top: 1px solid #eee; color: #777; font-size: 16px; padding: 16px 0; flex: 0 0 auto; }
-@media (max-width: 900px) {
-  html, body { overflow: auto; height: auto; }
-  .site { min-height: 100vh; height: auto; overflow: visible; }
-  .header { padding-top: 24px; }
-  .symbols { font-size: 32px; word-spacing: 16px; margin-bottom: 14px; }
-  .nav { font-size: 19px; }
-  .home-wrap { margin-top: 18px; height: auto; padding: 0 18px 40px; display: flex; flex-direction: column; align-items: center; }
-  .name, .tag { position: static; transform: none; }
-  .name { order: 2; font-size: 64px; letter-spacing: -3px; margin-top: 18px; }
-  .hero-img { order: 1; width: min(86vw, 500px); }
-  .tag { order: 3; font-size: 38px; margin-top: 18px; }
-  .quote { order: 4; font-size: 17px; margin-top: 28px; }
-  .sub { order: 5; font-size: 18px; }
-  .page-wrap { margin: 45px 22px 0; }
-  h1 { font-size: 44px; }
-  .coming { font-size: 26px; }
-}
+.quote { text-align: center; margin-top: 18px; color: #666; font-style: italic; font-weight: 700; font-size: 15px; }
+.sub { text-align: center; margin-top: 5px; font-size: 15px; }
+.page-wrap { max-width: 880px; margin: 34px auto 0; }
+h1 { font-family: 'Abril Fatface', Georgia, serif; font-size: 44px; margin: 0 0 14px; line-height: 1; font-weight: 400; }
+.rule { border: 0; border-top: 1px solid #ccc; margin: 0 0 62px; }
+.coming { text-align: center; color: #666; font-size: 24px; font-style: italic; font-weight: 700; }
+.audio-list { margin-top: -26px; }
+.track { display: grid; grid-template-columns: 55px 1fr; gap: 0; border-bottom: 1px solid #eee; padding: 15px 0; font-size: 20px; font-family: 'Libre Baskerville', Georgia, serif; }
+.num { color: #aaa; font-family: 'Libre Baskerville', Georgia, serif; font-size: 16px; text-align: center; font-weight: 700; }
+.footer { text-align: center; border-top: 1px solid #eee; color: #777; font-size: 13px; padding: 10px 0; flex: 0 0 auto; }
+
 @media (max-height: 780px) and (min-width: 901px) {
-  .header { padding-top: 18px; }
-  .symbols { font-size: 30px; margin-bottom: 12px; }
-  .nav { font-size: 18px; }
-  .home-wrap { margin-top: 12px; height: calc(100vh - 120px); }
-  .hero-img { width: min(31vw, 465px, 56vh); }
-  .quote { margin-top: 14px; font-size: 17px; }
-  .sub { font-size: 17px; margin-top: 6px; }
-  .footer { font-size: 14px; padding: 12px 0; }
+  .header { padding-top: 16px; }
+  .symbols { font-size: 38px; margin-bottom: 7px; }
+  .nav { font-size: 17px; }
+  .home-wrap { margin-top: 10px; height: calc(100vh - 104px); height: calc(100svh - 104px); }
+  .hero-img { width: min(31vw, 465px, 56vh); width: min(31vw, 465px, 56svh); }
+  .quote { margin-top: 12px; font-size: 14px; }
+  .sub { font-size: 14px; margin-top: 4px; }
+  .footer { font-size: 12px; padding: 8px 0; }
+}
+
+@media (max-width: 900px) {
+  html, body { height: 100%; overflow: hidden; }
+  .site { height: 100vh; height: 100svh; min-height: 0; overflow: hidden; }
+  .header { padding-top: 14px; }
+  .symbols { font-size: 36px; word-spacing: 16px; margin-bottom: 7px; }
+  .nav { font-size: 16px; }
+  .nav span { padding: 0 3px; }
+  .home-wrap {
+    margin-top: 10px;
+    height: calc(100svh - 100px);
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .hero-img { order: 1; width: min(72vw, 360px); max-height: 50svh; object-fit: contain; }
+  .name, .tag { position: static; transform: none; }
+  .name { order: 2; font-size: clamp(40px, 16vw, 64px); letter-spacing: -2px; margin-top: 8px; line-height: .9; }
+  .tag { order: 3; font-size: clamp(28px, 9vw, 38px); margin-top: 8px; line-height: 1; }
+  .quote { order: 4; font-size: 12px; margin-top: 12px; line-height: 1.15; }
+  .sub { order: 5; font-size: 12px; margin-top: 3px; line-height: 1.1; }
+  .footer { font-size: 11px; padding: 6px 0; }
+  .page-wrap { margin: 28px 22px 0; max-height: calc(100svh - 110px); overflow: hidden; }
+  h1 { font-size: 38px; }
+  .rule { margin-bottom: 46px; }
+  .coming { font-size: 22px; }
+  .track { grid-template-columns: 42px 1fr; padding: 13px 0; font-size: 16px; }
+  .num { font-size: 13px; }
+}
+
+@media (max-width: 390px), (max-height: 700px) and (max-width: 900px) {
+  .header { padding-top: 10px; }
+  .symbols { font-size: 32px; margin-bottom: 5px; }
+  .nav { font-size: 14px; }
+  .home-wrap { margin-top: 7px; height: calc(100svh - 82px); }
+  .hero-img { width: min(68vw, 310px); max-height: 47svh; }
+  .name { font-size: clamp(34px, 14vw, 54px); margin-top: 6px; }
+  .tag { font-size: clamp(24px, 8vw, 32px); margin-top: 6px; }
+  .quote { font-size: 11px; margin-top: 9px; }
+  .sub { font-size: 11px; }
+  .footer { font-size: 10px; padding: 5px 0; }
 }
